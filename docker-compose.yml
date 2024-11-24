@@ -1,0 +1,37 @@
+version: '3'
+services:
+  weather-app:
+    build:
+      context: ./weather-app
+      dockerfile: Dockerfile
+    depends_on:
+      - backend
+    ports:
+      - "80:80"
+    networks:
+      - mynetwork
+
+  redis:
+    container_name: redis-service
+    image: 'redis'
+    restart: always
+    command: redis-server --save
+    networks:
+      - mynetwork
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    depends_on:
+      - redis
+    ports:
+      - "8888:8888"
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:
+    driver: bridge

@@ -1,0 +1,135 @@
+.weather-info-main {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.weather-info-main-temperature {
+    font-size: 3em;
+    font-weight: 500;
+}
+
+.weather-info-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.main-card {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.img-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.2em;
+    border-radius: 1em;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-right: 16px;
+}
+
+.img-container img {
+    width: 100px;
+    height: 100px;
+    filter: grayscale(100%) brightness(0) invert(100%);
+}
+
+.weather-details-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); */
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 8px;
+    grid-row-gap: 8px;
+}
+
+
+@media screen and (max-width: 1050px) {
+    .weather-details-grid {
+        grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .weather-details-grid {
+        grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    }
+}
+
+.weather-details {
+    background: rgba(255, 255, 255, 0.01);
+    border-radius: 10px;
+    padding: 10px;
+    color: #555;
+    font-size: 1.2em;
+    font-weight: bold;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.2s;
+}
+
+.weather-details:hover {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.1);
+}
+
+
+.feels-like {
+    grid-area: 1 / 1 / 2 / 2;
+    aspect-ratio: 1;
+}
+
+
+.feels-like-box {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    opacity: 0.8;
+}
+
+.weather-details-grid p {
+    margin-bottom: 0;
+}
+
+.min-max {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.air-polution {
+    grid-area: 1 / 2 / 2 / 4;
+
+}
+
+.pressure {
+    grid-area: 1 / 4 / 2 / 5;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    opacity: 0.8;
+}
+
+.humidity {
+    grid-area: 2 / 3 / 3 / 4;
+}
+
+.sunset-sunrise {
+    grid-area: 2 / 1 / 3 / 3;
+}
+
+.wind {
+    grid-area: 2 / 4 / 3 / 5;
+}
+
+.temperature-slider-container {
+  width: 100%;
+}

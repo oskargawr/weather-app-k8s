@@ -1,0 +1,57 @@
+.admin-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 800px;
+  margin: auto;
+  padding-top: 2em;
+  background: none;
+}
+
+h5.card-title {
+    color: white;
+    font-weight: bold;
+}
+
+.token-container {
+  width: 100%;
+}
+
+p.token-val {
+  font-size: 0.8rem;
+  font-weight: bold;
+  opacity: 0.5;
+  overflow-wrap: break-word;
+}
+
+.history-container {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.history-container ul {
+  list-style-type: none;
+  padding: 0.2em;
+  gap: 0.2em;
+}
+
+.history-container li {
+    background: none;
+    color: white;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+  outline: solid 1px;
+  border: none;
+}
+
+button.btn {
+    color: white;
+    outline: solid 1px;
+}
+
+button.btn:hover {
+    background: white;
+    color: #333;
+}

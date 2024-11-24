@@ -1,0 +1,12 @@
+.sunset-sunrise-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.sunset-sunrise-container-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
