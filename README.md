@@ -1,7 +1,7 @@
 # Weather App
 
 
-This is a weather app built in React, utilizing the Open Weather API and GeoDB API. It allows users to add cities and compare weather conditions in them. Users have the option to filter cities by temperature range and sort them by temperature and air quality.
+This is a weather app built in React, utilizing the Open Weather API and GeoDB API. It allows users to add cities and compare weather conditions in them. Users have the option to filter cities by temperature range and sort them by temperature and air quality. The app also has an admin panel, authentication and authorization, using Keycloak. The app is dockerized and uses Redis for caching. It has a simple backend built in Node.js with Express.
 
 ## Features
 
